@@ -1,7 +1,7 @@
 {
   "private": true,
   "name" : "npm",
-  "version" : "1.0",
+  "version" : "1.0.0",
   "devDependencies": {
     "gulp": "^3.8.8",
     "laravel-elixir": "*"
