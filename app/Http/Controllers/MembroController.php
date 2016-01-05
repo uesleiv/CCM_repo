@@ -15,7 +15,7 @@ class MembroController extends Controller {
 	public function index()
 	{
 		//teste
-		$membros = Membro::orderBy('nome')->get();
+		$membros = Membros::orderBy('id')->get();
 		return view('membro.index',compact('membros'));
 
 	}
