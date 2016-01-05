@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Membros extends Model {
+class Membro extends Model {
 
 	//
     protected $fillable = array('nome', 'sexo', 'email');
