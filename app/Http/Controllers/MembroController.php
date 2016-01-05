@@ -15,7 +15,9 @@ class MembroController extends Controller {
 	public function index()
 	{
 		//
-		return "Olá Laravel. Aqui vou eu!!!!";
+		$membros = Membro::orderBy('nome')->get();
+		return view('membro.index',compact($membros));
+
 	}
 
 	/**
