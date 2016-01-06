@@ -12,9 +12,9 @@
         <br/>
         Nome: <?php echo $membro->nome ?>
         <br/>
-        Sexo: <?php echo $membro->sexo?>
+        Sexo: <?php echo $membro->sexo ?>
         <br/>
-        Email: <?php echo $membro->email?>
+        Email: <?php echo $membro->email ?>
     </li>
     <?php endforeach ?>
 </ul>

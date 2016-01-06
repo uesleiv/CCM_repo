@@ -16,14 +16,14 @@ class CreateMembrosTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('nome');
-			$table->string('sexo');
+			$table->char('sexo',2);
 			$table->string('email');
-			$table->string('dtNascimento');
+			$table->date('dtNascimento');
 			$table->string('enderecoPessoal');
 			$table->string('cidadeEndPessoal');
-			$table->string('ufEndPessoal');
+			$table->char('ufEndPessoal',2);
 			$table->string('cepEndPessoal');
-			$table->string('nrEndPessoal');
+			$table->integer('nrEndPessoal');
 			$table->string('complEndPessoal');
 			$table->string('fonePessoal');
 			$table->string('celPessoal');
