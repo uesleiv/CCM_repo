@@ -17,7 +17,7 @@ class MembroController extends Controller {
 		//teste
 
 		$membros = Membro::orderBy('id')->get();
-		return view::make('membro.index',compact('membros'));
+		return view::make('membros',compact('membros'));
 
 	}
 
