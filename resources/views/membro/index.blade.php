@@ -6,6 +6,7 @@
 </head>
 <body>
 <ul>
+    <?php error_reporting( E_ALL ); ?>
     <?php if($membros->count()) : ?>
         <?php foreach ($membros as $membro): ?>
         <li>
