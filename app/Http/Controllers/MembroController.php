@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -14,9 +14,9 @@ class MembroController extends Controller {
 	 */
 	public function index()
 	{
-		$membros = Membro::orderBy('id')->get();
-		return view('membro.index',compact('membros'));
-
+		//$membros = Membro::orderBy('id')->get();
+		//return view('membro.index',compact('membros'));
+		return view('membro.index');
 	}
 
 	/**
