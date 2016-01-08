@@ -4,6 +4,7 @@ use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Membro;
+use Input, Redirect;
 
 use Illuminate\Http\Request;
 
