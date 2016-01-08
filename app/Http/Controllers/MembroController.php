@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use app\Membro;
+
 class MembroController extends Controller {
 
 	/**
@@ -14,9 +16,9 @@ class MembroController extends Controller {
 	 */
 	public function index()
 	{
-		//$membros = Membro::orderBy('id')->get();
-		//return view('membro.index',compact('membros'));
-		return view('membro.index');
+		$membros = Membro::orderBy('id')->get();
+		return view('membro.index',compact('membros'));
+		//return view('membro.index');
 	}
 
 	/**
