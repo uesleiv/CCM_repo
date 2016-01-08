@@ -11,8 +11,10 @@
     <label for="email">Email:</label>
     <input type="text" name="email">
     <label for="sexo">Sexo:</label>
-    <input type="text" name="sexo">
-
+    <select name="sexo">
+        <option value="M">M</option>
+        <option value="F">F</option>
+    </select>
     <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
     <input type="submit">
 </form>

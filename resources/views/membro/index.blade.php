@@ -18,8 +18,9 @@
     @else
         <h2>Nenhum membro encontrado.</h2>
     @endif
-    
-    <!-- <?//php if($membros->count()) : ?>
+
+    <!-- Outra Maneira de codificar em PHP
+        <?//php if($membros->count()) : ?>
         <?//php foreach ($membros as $membro): ?>
         <li>
             Id: <?//php echo $membro->id; ?>
