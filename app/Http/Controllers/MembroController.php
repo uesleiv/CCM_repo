@@ -2,10 +2,11 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Membro;
 
 use Illuminate\Http\Request;
 
-use app\Membro;
+
 
 class MembroController extends Controller {
 
