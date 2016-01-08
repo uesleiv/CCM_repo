@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Membro;
@@ -19,7 +20,6 @@ class MembroController extends Controller {
 	{
 		$membros = Membro::orderBy('id')->get();
 		return view('membro.index',compact('membros'));
-		//return view('membro.index');
 	}
 
 	/**
@@ -29,7 +29,7 @@ class MembroController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('membro.create');
 	}
 
 	/**
@@ -39,7 +39,8 @@ class MembroController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		$membro = Membro::create(Input::all());
+		return Redirect::route('membro.index');
 	}
 
 	/**
