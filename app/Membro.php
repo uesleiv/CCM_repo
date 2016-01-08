@@ -1,7 +1,6 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Membro;
 
 class Membro extends Model {
 
