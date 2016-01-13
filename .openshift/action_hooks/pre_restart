@@ -70,3 +70,5 @@ else
     set_env_var 'DB_DRIVER' $DB_DRIVER $OPENSHIFT_HOMEDIR/.env/user_vars
   fi
 fi
+
+. "$OPENSHIFT_REPO_DIR/bower_update"

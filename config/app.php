@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'debug' => true,//env('APP_DEBUG'),
+	'debug' => true,//env('APP_DEBUG'), UESLEI TODO VOLTAR !!! 07/01/16
 
 	/*
 	|--------------------------------------------------------------------------
