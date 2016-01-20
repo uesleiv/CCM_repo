@@ -6,5 +6,8 @@
     "gulp": "^3.8.8",
     "laravel-elixir": "*",
     "bower": "1.2.x"
+  },
+  "scripts": {
+    "postinstall": "HOME=$OPENSHIFT_REPO_DIR bower install || bower install"
   }
 }
