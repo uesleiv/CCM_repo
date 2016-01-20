@@ -71,4 +71,3 @@ else
   fi
 fi
 
-. "$OPENSHIFT_REPO_DIR/bower_update"

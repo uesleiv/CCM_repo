@@ -90,9 +90,3 @@ echo 1>&2
 pushd ${OPENSHIFT_REPO_DIR} > /dev/null
 php artisan migrate --force
 popd > /dev/null
-
-#instala o bower.
-HOME=$HOME/app-root/runtime
-cd ~/repo
-npm install bower
-./node_modules/.bin/bower install
