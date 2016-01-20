@@ -8,6 +8,6 @@
     "bower": "1.2.x"
   },
   "scripts": {
-    "postinstall": "HOME=$OPENSHIFT_REPO_DIR bower install || bower install"
+    "postinstall": "if [ -d \"$OPENSHIFT_REPO_DIR\" ]; then (export HOME=\"$OPENSHIFT_REPO_DIR\"/..; bower install) else (bower install) fi"
   }
 }
