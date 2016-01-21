@@ -4,10 +4,6 @@
   "version" : "1.0.0",
   "devDependencies": {
     "gulp": "^3.8.8",
-    "laravel-elixir": "*",
-    "bower": "1.2.x"
-  },
-  "scripts": {
-    "postinstall": "if [ -d \"$OPENSHIFT_REPO_DIR\" ]; then (export HOME=\"$OPENSHIFT_REPO_DIR\"/..; $(npm bin)/bower install) else ($(npm bin)/bower install) fi && npm run setup"
+    "laravel-elixir": "*"
   }
 }
