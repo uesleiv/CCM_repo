@@ -20,7 +20,7 @@ class MembroController extends Controller {
 	public function index()
 	{
 		$membros = Membro::orderBy('id')->get();
-		$page_title = "Administração de Membros";
+		view::share('page_title','administracao !!!!');
 		return view('membro.index',compact('membros'));
 	}
 
