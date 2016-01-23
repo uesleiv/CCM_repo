@@ -20,6 +20,7 @@ class MembroController extends Controller {
 	public function index()
 	{
 		$membros = Membro::orderBy('id')->get();
+		$page_title = "Administração de Membros";
 		return view('membro.index',compact('membros'));
 	}
 
