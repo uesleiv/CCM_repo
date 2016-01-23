@@ -12,6 +12,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{asset("/adminlte/bootstrap/css/bootstrap.min.css")}}">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{asset("/adminlte/plugins/datatables/dataTables.bootstrap.css")}}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
@@ -64,8 +66,8 @@ desired effect
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Page Header
-                <small>Optional description</small>
+                {{ $page_title or "Page Title" }}
+                <small>{{ $page_description or null }}</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -167,10 +169,23 @@ desired effect
 
 <!-- jQuery 2.1.4 -->
 <script src="{{asset("/adminlte/plugins/jQuery/jQuery-2.1.4.min.js")}}"></script>
-<!-- Bootstrap 3.3.5 -->
-<script src="{{asset("/adminlte/bootstrap/js/bootstrap.min.js")}}"></script>
+<!-- DataTables -->
+<script src="{{asset("/adminlte/plugins/datatables/jquery.dataTables.min.js")}}"></script>
+<script src="{{asset("/adminlte/plugins/datatables/dataTables.bootstrap.min.js")}}"></script>
+<!-- SlimScroll -->
+<script src="{{asset("/adminlte/plugins/slimScroll/jquery.slimscroll.min.js")}}"></script>
+<!-- FastClick -->
+<script src="{{asset("/adminlte/plugins/fastclick/fastclick.js")}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset("/adminlte/dist/js/app.min.js")}}"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="{{asset("/adminlte/bootstrap/js/bootstrap.min.js")}}"></script>
+
+<script>
+    $(function () {
+        $("#membros1").DataTable();
+    });
+</script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
