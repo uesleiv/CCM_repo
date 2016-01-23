@@ -43,6 +43,16 @@
     <script src="{{asset("/adminlte/plugins/datatables/jquery.dataTables.min.js")}}"></script>
     <script src="{{asset("/adminlte/plugins/datatables/dataTables.bootstrap.min.js")}}"></script>
 
+    <!-- jQuery 2.1.4 -->
+    <script src="{{asset("/adminlte/plugins/jQuery/jQuery-2.1.4.min.js")}}"></script>
+    <!-- SlimScroll -->
+    <script src="{{asset("/adminlte/plugins/slimScroll/jquery.slimscroll.min.js")}}"></script>
+    <!-- FastClick -->
+    <script src="{{asset("/adminlte/plugins/fastclick/fastclick.js")}}"></script>
+    <!-- AdminLTE App -->
+    <script src="{{asset("/adminlte/dist/js/app.min.js")}}"></script>
+    <!-- AdminLTE for demo purposes -->
+
     <script>
         $(function () {
             $("#example1").DataTable();
