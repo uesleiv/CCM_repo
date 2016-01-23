@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <title>Listagem de Membros</title>
-</head>
-<body>
+@extends('admin_template')
+
+@section('content')
 <ul>
     @if($membros->count())
         @foreach($membros as $membro)
@@ -36,6 +32,3 @@
         <h2>Nenhum membro encontrado.</h2>
     <?//php endif ?> -->
 </ul>
-<a href="{!!URL::route('membro.create')!!}">Cadastrar</a>
-</body>
-</html>
