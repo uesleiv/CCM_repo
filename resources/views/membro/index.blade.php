@@ -40,8 +40,8 @@
         <!-- /.box-body -->
     </div>
     <!-- DataTables -->
-    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="{{asset("/adminlte/plugins/datatables/jquery.dataTables.min.js")}}"></script>
+    <script src="{{asset("/adminlte/plugins/datatables/dataTables.bootstrap.min.js")}}"></script>
 
     <script>
         $(function () {
