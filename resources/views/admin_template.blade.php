@@ -14,10 +14,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{asset("/adminlte/bootstrap/css/bootstrap.min.css")}}">
     <!-- DataTables -->
     <link rel="stylesheet" href="{{asset("/adminlte/plugins/datatables/dataTables.bootstrap.css")}}">
-    <!-- InputMask -->
-    <script src="{{asset("/adminlte/plugins/input-mask/jquery.inputmask.js")}}"></script>
-    <script src="{{asset("/adminlte/plugins/input-mask/jquery.inputmask.date.extensions.js")}}"></script>
-    <script src="{{asset("/adminlte/plugins/input-mask/jquery.inputmask.extensions.js")}}"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
@@ -184,6 +180,10 @@ desired effect
 <script src="{{asset("/adminlte/dist/js/app.min.js")}}"></script>
 <!-- Bootstrap 3.3.5 -->
 <script src="{{asset("/adminlte/bootstrap/js/bootstrap.min.js")}}"></script>
+<!-- InputMask -->
+<script src="{{asset("/adminlte/plugins/input-mask/jquery.inputmask.js")}}"></script>
+<script src="{{asset("/adminlte/plugins/input-mask/jquery.inputmask.date.extensions.js")}}"></script>
+<script src="{{asset("/adminlte/plugins/input-mask/jquery.inputmask.extensions.js")}}"></script>
 
 <script>
     $(function () {
