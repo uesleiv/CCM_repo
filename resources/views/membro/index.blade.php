@@ -38,7 +38,7 @@
             </table>
         </div>
         <!-- /.box-body -->
-    <a href="create.blade.php">Adicionar</a>
+    <a href="/create">Adicionar</a>
 
     </div>
 
