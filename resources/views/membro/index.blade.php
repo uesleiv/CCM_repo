@@ -18,8 +18,8 @@
                 <tbody>
                     @if($membros->count())
                         @foreach($membros as $membro)
-                            <tr> <!--linhas-->
-                                <td>{{{ $membro->nome }}} </td> <!--coluna-->
+                            <tr> <!--linhas e colunas-->
+                                <td>{{{ $membro->nome }}} </td>
                                 <td>{{{ $membro->sexo }}}</td>
                                 <td>{{{ $membro->email }}}</td>
                             </tr>
@@ -38,6 +38,9 @@
             </table>
         </div>
         <!-- /.box-body -->
+    <a href="create.blade.php">Adicionar</a>
+
     </div>
+
 @endsection
 
