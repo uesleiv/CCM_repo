@@ -1,5 +1,3 @@
-{{$page_title = "Página Principal da Administração"}}
-
 @extends('admin_template')
 
 @section('content')
