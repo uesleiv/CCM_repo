@@ -38,7 +38,7 @@
             </table>
         </div>
         <!-- /.box-body -->
-    <a href="/create">Adicionar</a>
+    <a href="create">Adicionar</a>
 
     </div>
 
