@@ -8,8 +8,8 @@
         <input type="email" name="email" placeholder="Informe o email" required>
         <label for="sexo">Sexo:</label>
         <select name="sexo">
-            <option value="M">M</option>
-            <option value="F">F</option>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
         </select>
 
         <label for="rg">RG</label>
@@ -24,17 +24,6 @@
             </div>
             <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
         </div>
-
-
-
-        <div class="input-group">
-            <div class="input-group-addon">
-                <i class="fa fa-calendar"></i>
-            </div>
-            <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
-        </div>
-
-
 
         <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
         <input type="submit">
