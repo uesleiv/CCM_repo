@@ -5,7 +5,7 @@
         <label for="nome">Nome:</label>
         <input type="text" name="nome">
         <label for="email">Email:</label>
-        <input type="text" name="email">
+        <input type="email" name="email" placeholder="Informe o email">
         <label for="sexo">Sexo:</label>
 
 
