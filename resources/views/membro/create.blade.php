@@ -3,9 +3,9 @@
 @section('content')
     <form action="{!!URL::route('membro.store')!!}" method="post">
         <label for="nome">Nome:</label>
-        <input type="text" name="nome">
+        <input type="text" name="nome" placeholder="Informe o nome" required>
         <label for="email">Email:</label>
-        <input type="email" name="email" placeholder="Informe o email">
+        <input type="email" name="email" placeholder="Informe o email" required>
         <label for="sexo">Sexo:</label>
 
 
