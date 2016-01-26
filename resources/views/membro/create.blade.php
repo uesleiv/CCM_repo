@@ -16,7 +16,7 @@
         <input type="text" name="rg">
 
         <label for="cpf">CPF</label>
-        <input type="text" name="cpf" placeholder="   .   .  -  ">
+        <input type="text" name="cpf" placeholder="   .   .  -  " data-inputmask='"mask": "999.999.999-99"' data-mask>
 
         <div class="input-group">
             <div class="input-group-addon">
