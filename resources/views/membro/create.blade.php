@@ -34,7 +34,7 @@
         <label for="complemento">Complemento</label>
         <input type="text" name="complemento">
         <label for="cep">CEP</label>
-        <input type="text" name="cep" data-inputmask='"mask": "99.999.-999"' data-mask>>
+        <input type="text" name="cep" data-inputmask='"mask": "99.999.-999"' data-mask>
 
         <!--Logradouro-->
         <label for="telefone">Telefone</label>
