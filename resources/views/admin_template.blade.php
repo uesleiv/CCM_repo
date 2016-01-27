@@ -188,6 +188,9 @@ desired effect
 <script>
     $(function () {
         $("#membros1").DataTable();
+        //Datemask dd/mm/yyyy
+        $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+        $("[data-mask]").inputmask();
     });
 </script>
 
