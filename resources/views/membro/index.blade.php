@@ -13,7 +13,7 @@
                     <th>Nome </th>
                     <th>Sexo</th>
                     <th>Email</th>
-                    <th></th>
+                    <th>/th>
                 </tr>
                 </thead> <!--cabeçalho -->
                 <tbody>
@@ -23,7 +23,7 @@
                                 <td>{{{ $membro->nome }}} </td>
                                 <td>{{{ $membro->sexo }}}</td>
                                 <td>{{{ $membro->email }}}</td>
-                                <td><a href="membro/edit/{{ $membro->id }}</td>
+                                <td><a href="membro/edit/{{ $membro->id }}">Editar</a></td>
                             </tr>
                         @endforeach
                     @else
@@ -35,6 +35,7 @@
                     <th>Nome</th>
                     <th>Sexo</th>
                     <th>Email</th>
+                    <th></th>
                 </tr>
                 </tfoot>
             </table>
