@@ -13,7 +13,7 @@
                     <th>Nome </th>
                     <th>Sexo</th>
                     <th>Email</th>
-                    <th>/th>
+                    <th></th>
                 </tr>
                 </thead> <!--cabeçalho -->
                 <tbody>
