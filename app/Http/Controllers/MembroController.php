@@ -21,7 +21,6 @@ class MembroController extends Controller {
 	{
 		$membros = Membro::orderBy('id')->get();
 		$page_title = "Controle de Membros!!!";
-		/*View::share('page_title','administracao !!!!');*/
 		return view('membro.index',compact('membros','page_title'));
 	}
 
@@ -65,7 +64,9 @@ class MembroController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$membro = Membro::find('id');
+		$page_title = "Membro " & $membro->nome;
+		return view('membro.edit',compact('membro','page_title'));
 	}
 
 	/**
