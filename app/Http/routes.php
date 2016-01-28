@@ -20,6 +20,6 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::controller('membro', 'MembroController')
+Route::resource('membro', 'MembroController')
 
 ;
