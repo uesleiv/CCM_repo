@@ -23,7 +23,7 @@
                                 <td>{{{ $membro->nome }}} </td>
                                 <td>{{{ $membro->sexo }}}</td>
                                 <td>{{{ $membro->email }}}</td>
-                                <td><a href="membro/edit/{{ $membro->id }}">Editar</a></td>
+                                <td><a href="membro/{{ $membro->id }}/edit">Editar</a></td>
                             </tr>
                         @endforeach
                     @else
