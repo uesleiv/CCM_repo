@@ -8,9 +8,9 @@
             <label for="email">Email:</label>
             <input type="email" name="email" placeholder="Informe o email" required value="{{{ $membro->email}}}">
             <label for="sexo">Sexo:</label>
-            <<select name="sexo">
-                <option value="M" {{$membro->sexo = "M" ? "selected" : ""}}>Masculino</option>
-                <option value="F" {{$membro->sexo = "F" ? "selected" : ""}}>Feminino</option>
+            <select name="sexo">
+                <option value="M" {{$membro->sexo == "M" ? "selected" : ""}}>Masculino</option>
+                <option value="F" {{$membro->sexo == "F" ? "selected" : ""}}>Feminino</option>
             </select>
             <label for="rg">RG</label>
             <input type="text" name="rg">
