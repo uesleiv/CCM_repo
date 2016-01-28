@@ -1,7 +1,7 @@
 @extends('admin_template')
 
 @section('content')
-    <form action="store" method="post">
+    <form action="{!!URL::route('membro.store')!!}" method="post">
         @if($membro->count())
             <label for="nome">Nome:</label>
             <input type="text" name="nome" placeholder="Informe o nome" required value="{{{ $membro->nome }}}">
