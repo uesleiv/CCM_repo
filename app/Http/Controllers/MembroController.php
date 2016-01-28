@@ -65,7 +65,7 @@ class MembroController extends Controller {
 	public function edit($id)
 	{
 		$membro = Membro::find($id);
-		$page_title = "Membro " & $membro->nome;
+		$page_title = "Membro " + $membro->nome;
 		return view('membro.edit',compact('membro','page_title'));
 	}
 
