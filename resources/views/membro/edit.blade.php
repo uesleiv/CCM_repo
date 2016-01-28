@@ -24,11 +24,11 @@
                 <option value="Ca">Casado</option>
                 <option value="Se">Separado</option>
                 <option value="Di">Divorciado</option>
-                <option value="Vi">Viúvo</option>
+                <option value="Vi">ViÃºvo</option>
             </select>
             <!-- Logradouro -->
-            <label for="endereco">Endereço</label>
-            <input type="text" name="endereco" placeholder="endereço com o número">
+            <label for="endereco">EndereÃ§o</label>
+            <input type="text" name="endereco" placeholder="endereÃ§o com o nÃºmero">
             <label for="cidade">Cidade</label>
             <input type="text" name="cidade">
             <label for="complemento">Complemento</label>
@@ -53,7 +53,7 @@
             <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
             <input type="submit">
         @else
-            <h1>Membro não encontrado</h1>
+            <h1>Membro nÃ£o encontrado</h1>
         @endif
     </form>
 @endsection
