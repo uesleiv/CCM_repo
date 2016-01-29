@@ -77,7 +77,8 @@ class MembroController extends Controller {
 	 */
 	public function update($id)
 	{
-		//
+		$membro = Membro::update(Input::all());
+		return Redirect::route('membro.index');
 	}
 
 	/**

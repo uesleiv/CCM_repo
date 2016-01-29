@@ -28,6 +28,7 @@ class CreateMembrosTable extends Migration {
 			$table->string('fonePessoal');
 			$table->string('celPessoal');
 			$table->timestamps();
+			$table->softDeletes(); //habilita o delete lógico
 		});
 	}
 
