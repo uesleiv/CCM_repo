@@ -77,7 +77,12 @@ class MembroController extends Controller {
 	 */
 	public function update($id)
 	{
-		$membro = Membro::update(Input::all());
+		$membro = Membro::find($id);
+		$membro->nome = Input::get('nome');
+		$membro->email = Input::get('email');
+		$membro->sexo = Input::get ('sexo');
+		$membro->save();
+
 		return Redirect::route('membro.index');
 	}
 
