@@ -15,13 +15,13 @@
                     <th>Email</th>
                     <th></th>
                 </tr>
-                </thead> <!--cabeçalho -->
+                </thead> <!--cabeï¿½alho -->
                 <tbody>
                     @if($membros->count())
                         @foreach($membros as $membro)
                             <tr> <!--linhas e colunas-->
                                 <td>{{{ $membro->nome }}} </td>
-                                <td>{{{ $membro->sexo }}}</td>
+                                <td>{{{ $membro->sexo == "M" ? "Masculino" : "Feminino" }}}</td>
                                 <td>{{{ $membro->email }}}</td>
                                 <td><a href="membro/{{ $membro->id }}/edit">Editar</a></td>
                             </tr>

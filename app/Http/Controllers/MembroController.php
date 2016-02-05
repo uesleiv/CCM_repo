@@ -31,7 +31,8 @@ class MembroController extends Controller {
 	 */
 	public function create()
 	{
-		return view('membro.create');
+		$page_title = "Inclusão de membro";
+		return view('membro.create', compact('page_title'));
 	}
 
 	/**
@@ -80,7 +81,7 @@ class MembroController extends Controller {
 		$membro = Membro::find($id);
 		$membro->nome = Input::get('nome');
 		$membro->email = Input::get('email');
-		$membro->sexo = Input::get ('sexo');
+		$membro->sexo = Input::get('sexo');
 		$membro->save();
 
 		return Redirect::route('membro.index');
