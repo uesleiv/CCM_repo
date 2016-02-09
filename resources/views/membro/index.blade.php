@@ -1,6 +1,12 @@
 @extends('admin_template')
 
 @section('content')
+    @if (Session::has('mensagem'))
+        <div class="flash alert-info">
+            <p>{{ Session::get('mensagem') }}</p>
+        </div>
+    @endif
+
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Membros</h3>
@@ -14,16 +20,20 @@
                     <th>Sexo</th>
                     <th>Email</th>
                     <th></th>
+                    <th></th>
                 </tr>
-                </thead> <!--cabe�alho -->
+                </thead> <!--cabeçalho -->
                 <tbody>
                     @if($membros->count())
                         @foreach($membros as $membro)
                             <tr> <!--linhas e colunas-->
+                                {!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('membro.destroy', $membro->id))) !!}
                                 <td>{{{ $membro->nome }}} </td>
                                 <td>{{{ $membro->sexo == "M" ? "Masculino" : "Feminino" }}}</td>
                                 <td>{{{ $membro->email }}}</td>
-                                <td><a href="membro/{{ $membro->id }}/edit">Editar</a></td>
+                                <td>{!! link_to_route('membro.edit','Editar', array($membro->id)) !!}</td>
+                                <td>{{{ Form::submit('Excluir') }}}</td>
+                                {!! Form::close() !!}
                             </tr>
                         @endforeach
                     @else
@@ -36,13 +46,13 @@
                     <th>Sexo</th>
                     <th>Email</th>
                     <th></th>
+                    <th></th>
                 </tr>
                 </tfoot>
             </table>
         </div>
         <!-- /.box-body -->
-    <a href="membro/create">Adicionar</a>
-
+        {!! link_to_route('membro.create', 'Adicionar') !!}
     </div>
 
 @endsection

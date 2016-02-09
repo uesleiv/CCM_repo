@@ -1,14 +1,14 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes; /*Para habilitar o delete lógico*/
+use Illuminate\Database\Eloquent\SoftDeletes; /*Para habilitar o delete lï¿½gico*/
 
 class Membro extends Model {
 
 	//
     protected $fillable = array('nome', 'sexo', 'email');
 
-    // habilitar o delete lógico
+    // habilitar o delete lÃ³gico
     use SoftDeletes;
     protected $dates = ['deleted_at'];
 

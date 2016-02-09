@@ -19,7 +19,7 @@ class MembroController extends Controller {
 	 */
 	public function index()
 	{
-		$membros = Membro::orderBy('id')->get();
+		$membros = Membro::orderBy('nome')->get();
 		$page_title = "Controle de Membros!!!";
 		return view('membro.index',compact('membros','page_title'));
 	}
@@ -60,12 +60,12 @@ class MembroController extends Controller {
 	/**
 	 * Show the form for editing the specified resource.
 	 *
-	 * @param  int  $id
+	 * @param  Membro  $membro //alteraçao realizada na RouteServiceProvider - Ueslei
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit(Membro $membro)
 	{
-		$membro = Membro::find($id);
+		//$membro = Membro::find($id);
 		$page_title = "Membro " . $membro->nome;
 		return view('membro.edit',compact('membro','page_title'));
 	}
@@ -73,12 +73,13 @@ class MembroController extends Controller {
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  int  $id
+	 * @param  Membro  $membro
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Membro $membro)
 	{
-		$membro = Membro::find($id);
+		//$membro = Membro::findorfail($id);
+
 		$membro->nome = Input::get('nome');
 		$membro->email = Input::get('email');
 		$membro->sexo = Input::get('sexo');
@@ -90,12 +91,16 @@ class MembroController extends Controller {
 	/**
 	 * Remove the specified resource from storage.
 	 *
-	 * @param  int  $id
+	 * @param  Membro  $membro
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy(Membro $membro)
 	{
 		//
+		//$membro = Membro::find($id);
+		$membro->delete();
+
+		return Redirect::route('membro.index')->with('mensagem','Membro excluído');
 	}
 
 }
