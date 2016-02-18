@@ -17,11 +17,18 @@ class MembroController extends Controller {
 	 *
 	 * @return Response
 	 */
+
+	public function __construct(){
+		$this->middleware('auth');
+	}
+
 	public function index()
 	{
 		$membros = Membro::orderBy('nome')->get();
-		$page_title = "Controle de Membros!!!";
-		return view('membro.index',compact('membros','page_title'));
+		$page_title = "Cadastro";
+		$nivel_um 	= "Listagem";
+		$nivel_dois	= "Membros";
+		return view('membro.index',compact('membros','page_title','nivel_um', 'nivel_dois'));
 	}
 
 	/**
@@ -31,8 +38,10 @@ class MembroController extends Controller {
 	 */
 	public function create()
 	{
-		$page_title = "Inclusão de membro";
-		return view('membro.create', compact('page_title'));
+		$page_title = "Cadastro";
+		$nivel_um 	= $page_title;
+		$nivel_dois	= "Inclusão";
+		return view('membro.create', compact('page_title', 'nivel_um', 'nivel_dois'));
 	}
 
 	/**
@@ -66,8 +75,10 @@ class MembroController extends Controller {
 	public function edit(Membro $membro)
 	{
 		//$membro = Membro::find($id);
-		$page_title = "Membro " . $membro->nome;
-		return view('membro.edit',compact('membro','page_title'));
+		$page_title = "Cadastro - " . $membro->nome;
+		$nivel_um 	= "Cadastro";
+		$nivel_dois	= "Edição";
+		return view('membro.edit',compact('membro','page_title','nivel_um','nivel_dois'));
 	}
 
 	/**

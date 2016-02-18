@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" uploadOnCheckin="d14fe530-f0e0-49c2-ab1e-3c2d5feefa20">
     <serverData>
       <paths name="OpenShift">
         <serverdata>
@@ -13,5 +13,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="OpenShift" />
   </component>
 </project>

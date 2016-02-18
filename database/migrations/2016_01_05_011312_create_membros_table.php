@@ -15,6 +15,7 @@ class CreateMembrosTable extends Migration {
 		Schema::create('membros', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('id_grupo_caseiro')->nullable;
 			$table->string('nome');
 			$table->char('sexo',2);
 			$table->string('email');
@@ -28,7 +29,12 @@ class CreateMembrosTable extends Migration {
 			$table->string('fonePessoal');
 			$table->string('celPessoal');
 			$table->timestamps();
-			$table->softDeletes(); //habilita o delete lógico
+			$table->softDeletes(); //habilita o delete lÃ³gico
+
+			$table->foreign('id_grupo_caseiro')
+				  ->references('id')
+				  ->on('grupos_caseiros');
+				  //->onDelete('cascade');
 		});
 	}
 
