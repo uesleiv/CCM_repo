@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGruposCaseirosTable extends Migration {
+class CriarGruposCaseiros extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -14,12 +14,13 @@ class CreateGruposCaseirosTable extends Migration {
 	{
 		Schema::create('grupos_caseiros', function(Blueprint $table)
 		{
-			//todo Pode ser incrementado com os membros Facilitador e Auxiliar
+			//todo Pode ser incrementado com nomes Facilitador e Auxiliar
 			$table->increments('id');
 			$table->string('nome');
 			$table->timestamps();
 			$table->softDeletes(); //habilita o delete lógico
 		});
+
 	}
 
 	/**
@@ -29,13 +30,12 @@ class CreateGruposCaseirosTable extends Migration {
 	 */
 	public function down()
 	{
-		//Schema::drop('grupos_caseiros');
-
 		Schema::table('grupos_caseiros', function(Blueprint $table)
 		{
-			$table->dropForeign('id_grupo_caseiro_foreign');
+			$table->dropForeign('membros_id_grupo_caseiro_foreign');
 			Schema::drop('grupos_caseiros');
 		});
+
 	}
 
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMembrosTable extends Migration {
+class CriarMembros extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -15,7 +15,7 @@ class CreateMembrosTable extends Migration {
 		Schema::create('membros', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('id_grupo_caseiro')->nullable();
+			$table->integer('id_grupo_caseiro')->unsigned();
 			$table->string('nome');
 			$table->char('sexo',2);
 			$table->string('email');
@@ -38,6 +38,8 @@ class CreateMembrosTable extends Migration {
 				->on('grupos_caseiros');
 			//->onDelete('cascade');
 		});
+
+
 	}
 
 	/**
