@@ -1,3 +1,5 @@
+<input type="hidden" name="id_grupo_caseiro" value="1">
+
 <div class="form-group">
     {!! Form::label('nome', 'Nome:') !!}
         {!! Form::text('nome',null,array('required' => 'required')) !!}

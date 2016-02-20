@@ -1,9 +1,9 @@
 @extends('admin_template')
 
 @section('content')
-    {!! Form::model($grupocaseiro,['method'=>'PATCH', 'route' => ['grupocaseiro.update', $grupocaseiro->id]]) !!}
+    {!! Form::model($grupoCaseiro,['method'=>'PATCH', 'route' => ['gruposCaseiros.update', $grupoCaseiro->id]]) !!}
 
-        @include('gruposcaseiro.partials._form',['submit_text'=>'Atualizar'])
+        @include('gruposcaseiros.partials._form',['submit_text'=>'Atualizar'])
 
     {!! Form::close() !!}
 @endsection

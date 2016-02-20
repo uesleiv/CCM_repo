@@ -31,7 +31,7 @@ class Membro extends Model {
      */
     public function grupoCaseiro ()
     {
-        //return $this->hasMany('app\gruposCaseiros');
-        return $this->belongsTo('app\gruposCaseiros');
+          //return $this->hasMany('app\gruposCaseiros');
+        return $this->belongsTo('App\gruposCaseiros');
     }
 }

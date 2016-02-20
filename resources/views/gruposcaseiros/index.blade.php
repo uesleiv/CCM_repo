@@ -17,18 +17,16 @@
                 <thead>
                 <tr>
                     <th>Nome </th>
-                    <th>Sexo</th>
-                    <th>Email</th>
                     <th></th>
                 </tr>
                 </thead> <!--cabeçalho -->
                 <tbody>
-                    @if($gruposCaseiros->count())
-                        @foreach($gruposCaseiros as $grupoCaseiro)
+                    @if($gruposcaseiros->count())
+                        @foreach($gruposcaseiros as $grupoCaseiro)
                             <tr> <!--linhas e colunas-->
-                                {!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('grupocaseiro.destroy', $grupoCaseiro))) !!}
+                                {!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('gruposCaseiros.destroy', $grupoCaseiro))) !!}
                                 <td style="width: 350px">{{{ $grupoCaseiro->nome }}} </td>
-                                <td style="width: 140px">{!! link_to_route('gruposcaseiros.edit','Editar', array($grupoCaseiro),array('class' => 'btn btn-info')) !!}  {!! Form::submit('Excluir', array('class' => 'btn btn-danger')) !!}</td>
+                                <td style="width: 140px">{!! link_to_route('gruposCaseiros.edit','Editar', array($grupoCaseiro),array('class' => 'btn btn-info')) !!}  {!! Form::submit('Excluir', array('class' => 'btn btn-danger')) !!}</td>
                                 {!! Form::close() !!}
                             </tr>
                         @endforeach
@@ -46,10 +44,9 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer clearfix no-border">
-            <a href="grupocaseiro/create" class="btn btn-default pull-left"><i class="fa fa-plus"></i> Incluir</a>
+            <a href="gruposCaseiros/create" class="btn btn-default pull-left"><i class="fa fa-plus"></i> Incluir</a>
         </div>
 
     </div>
 
 @endsection
-

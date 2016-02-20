@@ -3,6 +3,7 @@
 use App\gruposCaseiros;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Input, Redirect;
 
 use Illuminate\Http\Request;
 
@@ -28,11 +29,11 @@ class gruposCaseirosController extends Controller {
 	 */
 	public function index()
 	{
-		$gruposCaseiros = gruposCaseiros::orderBy('nome')->get();
+		$gruposcaseiros = gruposCaseiros::orderBy('nome')->get();
 		$page_title = "Cadastro";
 		$nivel_um 	= "Listagem";
 		$nivel_dois	= "Grupos Caseiros";
-		return view('gruposcaseiros.index',compact('gruposCaseiros','page_title','nivel_um', 'nivel_dois'));
+		return view('gruposcaseiros.index',compact('gruposcaseiros','page_title','nivel_um', 'nivel_dois'));
 	}
 
 	/**
@@ -55,7 +56,7 @@ class gruposCaseirosController extends Controller {
 	 */
 	public function store()
 	{
-		$grupoCaseiro = gruposCaseiros::create(Input::all());
+		$grupocaseiro = gruposCaseiros::create(Input::all());
 		return Redirect::route('gruposCaseiros.index');
 	}
 
@@ -82,7 +83,7 @@ class gruposCaseirosController extends Controller {
 		$page_title = "Cadastro - " . $grupoCaseiro->nome;
 		$nivel_um 	= "Cadastro";
 		$nivel_dois	= "Edição";
-		return view('gruposCaseiros.edit',compact('grupoCaseiro','page_title','nivel_um','nivel_dois'));
+		return view('gruposcaseiros.edit',compact('grupoCaseiro','page_title','nivel_um','nivel_dois'));
 	}
 
 	/**

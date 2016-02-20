@@ -19,6 +19,7 @@
                     <th>Nome </th>
                     <th>Sexo</th>
                     <th>Email</th>
+                    <th>Grupo</th>
                     <th></th>
                 </tr>
                 </thead> <!--cabeçalho -->
@@ -30,6 +31,11 @@
                                 <td style="width: 350px">{{{ $membro->nome }}} </td>
                                 <td>{{{ $membro->sexo == "M" ? "Masculino" : "Feminino" }}}</td>
                                 <td>{{{ $membro->email }}}</td>
+                                @if (! empty($membro->grupoCaseiro))
+                                    <td>{{{ $membro->grupoCaseiro->nome }}}</td>
+                                @else
+                                    <td></td>
+                                @endif
                                 <td style="width: 140px">{!! link_to_route('membro.edit','Editar', array($membro),array('class' => 'btn btn-info')) !!}  {!! Form::submit('Excluir', array('class' => 'btn btn-danger')) !!}</td>
                                 {!! Form::close() !!}
                             </tr>
@@ -43,6 +49,7 @@
                     <th>Nome</th>
                     <th>Sexo</th>
                     <th>Email</th>
+                    <th>Grupo</th>
                     <th></th>
                 </tr>
                 </tfoot>
