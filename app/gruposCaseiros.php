@@ -9,12 +9,13 @@ class gruposCaseiros extends Model {
     use SoftDeletes;
     protected $fillable = ['nome'];
     protected $dates = ['deleted_at'];
+    //protected $table = "grupos_caseiros";
 
     /**
      * Um grupo caseiro pode ter vários membros
      * @return mixed
      */
-    public function membro()
+    public function membros()
     {
         //return $this->belongsTo('app\Membro');
         return $this->hasMany('app\Membro');

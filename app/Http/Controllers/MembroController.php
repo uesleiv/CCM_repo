@@ -25,10 +25,12 @@ class MembroController extends Controller {
 	public function index()
 	{
 		$membros = Membro::orderBy('nome')->get();
+		//$membros = Membro::all();
 		$page_title = "Cadastro";
 		$nivel_um 	= "Listagem";
 		$nivel_dois	= "Membros";
-		return view('membro.index',compact('membros','page_title','nivel_um', 'nivel_dois'));
+		$nomegrupo = Membro::find(1)->grupoCaseiro->nome;
+		return view('membro.index',compact('membros','nomegrupo','page_title','nivel_um', 'nivel_dois'));
 	}
 
 	/**

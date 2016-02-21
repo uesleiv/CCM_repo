@@ -31,7 +31,8 @@ class Membro extends Model {
      */
     public function grupoCaseiro ()
     {
+        return $this->hasOne('App\gruposCaseiros', 'id_grupo_caseiro', 'id');
           //return $this->hasMany('app\gruposCaseiros');
-        return $this->belongsTo('App\gruposCaseiros');
+
     }
 }

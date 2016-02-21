@@ -66,7 +66,7 @@ class gruposCaseirosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show(gruposCaseiros $grupoCaseiro)
 	{
 		//
 	}
